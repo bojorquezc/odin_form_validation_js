@@ -22,6 +22,7 @@ const error = {
     zipCode: {
         span: document.querySelector('.zip_error'),
         1: 'Zip code can\'t be empty',
+        2: 'Zip code needs to be 5 digits long',
     }
 }
 
@@ -75,6 +76,8 @@ form.zipCodeInput.addEventListener('input', (e) => {
 function zipError () {
     if (form.zipCodeInput.validity.valueMissing) {
         error.zipCode.span.textContent = error.zipCode[1];
+    } else if (form.zipCodeInput.validity.tooShort) {
+        error.zipCode.span.textContent = error.zipCode[2];
     }
     error.zipCode.span.className = 'error active';
 }
