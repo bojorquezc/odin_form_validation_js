@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,39 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./validation.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="form_container">
+        <div class="form_title">
+            <h1>JavaScript Form Validation</h1>
+        </div>
+        <form action="/" id="validation_form" novalidate>
+            <div class="form_field email_field_container">
+                <label for="email_input">Email:</label>
+                <input type="email" id="email_input">
+            </div>
+            <div class="form_field country_field_container">
+                <label for="country_input">Country:</label>
+                <input type="text" id="country_input">
+            </div>
+            <div class="form_field zip_code_container">
+                <label for="zip_code_input">Zip Code:</label>
+                <input type="number" id="zip_code_input">
+            </div>
+            <div class="form_field original_password_container">
+                <label for="original_password_input">Enter Password:</label>
+                <input type="password" id="original_password_input">
+            </div>
+            <div class="form_field repeat_password_container">
+                <label for="repeat_password_input">Repeat Password:</label>
+                <input type="password" id="repeat_password_input">
+            </div>
+            <button class="submit_button">
+                Submit Form
+            </button>
+        </form>
+    </div>
+
 </body>
+
 </html>
