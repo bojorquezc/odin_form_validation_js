@@ -37,7 +37,7 @@ body {
 }
 
 .form_title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     padding: 1rem 0 1rem 0;
     text-align: center;
@@ -57,9 +57,37 @@ body {
     padding: 0.5rem 0 0.5rem 0;
 }
 
+.error {
+    background-color: #990000;
+    border-radius: 0 0 5px 5px;
+  
+    box-sizing: border-box;
+    color: white;
+  
+    font-size: 80%;
+    padding: 0;
+    width: 100%;
+}
+
+.error.active {
+    padding: 0.3rem;
+}
+
 input {
     border-radius: 5px;
     padding: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:valid {
+    border: 2px solid rgb(0, 215, 0);
+}
+
+input:invalid {
+    border: 2px solid red;
 }
 
 label {
