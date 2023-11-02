@@ -10,11 +10,23 @@
 </head>
 
 <body>
+
+    <dialog class="submit_dialog">
+        <div class="dialog_container">
+            <div class="submit_message">
+                Thanks for submitting your form!
+            </div>
+            <div class="button_container">
+                <button class="dialog_close_button">Close</button>
+            </div>
+        </div>
+    </dialog>
+
     <div class="form_container">
         <div class="form_title">
             <h1>JavaScript<br> Form Validation</h1>
         </div>
-        <form action="/" id="validation_form" novalidate>
+        <form action="./" id="validation_form" novalidate>
             <div class="form_field email_field_container">
                 <label for="email_input">Email:</label>
                 <input type="email" id="email_input" required>
@@ -32,11 +44,13 @@
             </div>
             <div class="form_field original_password_container">
                 <label for="original_password_input">Enter Password:</label>
-                <input type="password" id="original_password_input">
+                <input type="password" id="original_password_input" minlength="8" maxlength="16" required>
+                <span class="error original_password_error" aria-live="polite"></span>
             </div>
             <div class="form_field repeat_password_container">
                 <label for="repeat_password_input">Repeat Password:</label>
-                <input type="password" id="repeat_password_input">
+                <input type="password" id="repeat_password_input" minlength="8" maxlength="16" required>
+                <span class="error repeat_password_error" aria-live="polite"></span>
             </div>
             <button class="submit_button">
                 Submit Form
